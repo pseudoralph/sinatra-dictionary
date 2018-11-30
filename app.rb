@@ -15,16 +15,16 @@ get ("/dictionary") do
   erb :dictionary
 end
 
-post ("/dictionary") do
-  @all_words = Dictionary.get_all_words
-  erb :dictionary
-end
+# post ("/dictionary") do
+#   @all_words = Dictionary.get_all_words
+#   erb :dictionary
+# end
 
-post ("/dictionary/add_word") do
-  @test = "add word"
+get ("/dictionary/add_word") do
   erb :add_word
 end
 
-post ("/test") do
-binding.pry
+post ("/dictionary/add_word") do
+  Dictionary.add_new_word({word: params[:word], definition: params[:definition]})
+  redirect ("/dictionary")
 end
