@@ -16,7 +16,16 @@ get ("/dictionary") do
 end
 
 get ("/definition/:word_id") do
-  # bindings.pry
+  @definition = Dictionary.get_word(params[:word_id])
+  erb :definition
+end
+
+get ("/definition/:word_id/add_definition") do
+  @definition = Dictionary.get_word(params[:word_id])
+  erb :add_definition
+end
+
+post ("/definition/:word_id/add_definition") do
   @definition = Dictionary.get_word(params[:word_id])
   erb :definition
 end

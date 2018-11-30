@@ -1,32 +1,9 @@
-ul {
-  list-style: none;
-  width: 100%;
-  padding: 0;
-}
-
-li {
-  padding: 0 0 10px 40px;
-  line-height: 42px;
-}
-
 a {
   color: #494545;
 }
 
-li:nth-child(even) {
-  background: #f2f2f2;
-}
-
 .app_box {
   height: 80vh;
-}
-
-.dictionary_view {
-  height: 100%;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
 }
 
 .interface_nav {
@@ -50,6 +27,33 @@ li:nth-child(even) {
   height: 72px;
   width: 72px;
   border-radius: 50%;
+}
+
+.dictionary_view {
+  height: 100%;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.dictionary_view ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.dictionary_view li {
+  padding: 10px 0 7px 30px;
+  line-height: 42px;
+}
+
+.dictionary_view li:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.add_definition ol {
+  padding-left: 15px;
 }
 
 .go_back {
