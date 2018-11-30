@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="card">
+    <h5 class="card-header"><%= @definition.word.capitalize %></h5>
+    <div class="card-body">
+      <label>Definition</label>
+
+      <% @definition.definitions.each do |definition| %>
+      <div class="form-control">
+        <p class="card-text"><%= definition %></p>
+
+      </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <a href="/dictionary" class="float-left">⬅️ return</a>
+
+
+</div>

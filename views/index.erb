@@ -4,7 +4,7 @@
     <div class="col-md-6">
 
       <form action="/dictionary" method="get" target="view_frame">
-        <button type="submit" class="btn btn-primary">View Dictionary</button>
+        <button type="submit" id="view" class="styled_buttons" ><i class="fas fa-book"></i></button>
       </form>
 
     </div>
@@ -12,15 +12,14 @@
     <div class="col-md-6">
 
       <form action="/dictionary/add_word" method="get" target="view_frame">
-        <button type="submit" class="btn btn-primary">Add Word</button>
+        <button type="submit" class="styled_buttons" id="add"><i class="fas fa-plus"></i></button>
       </form>
     </div>
 
   </div>
 
   <div class="row">
-    <iframe src="/dictionary" width="90%" height="600px" name="view_frame"></iframe>
-
+    <iframe src="/dictionary" width="90%" height="600px" name="view_frame" frameborder="0"></iframe>
   </div>
 
 

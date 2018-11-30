@@ -11,14 +11,15 @@ get ("/") do
 end
 
 get ("/dictionary") do
-  @all_words = Dictionary.get_all_words
+  @all_words = (Dictionary.get_all_words)
   erb :dictionary
 end
 
-# post ("/dictionary") do
-#   @all_words = Dictionary.get_all_words
-#   erb :dictionary
-# end
+get ("/definition/:word_id") do
+  # bindings.pry
+  @definition = Dictionary.get_word(params[:word_id])
+  erb :definition
+end
 
 get ("/dictionary/add_word") do
   erb :add_word
