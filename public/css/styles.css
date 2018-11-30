@@ -1,0 +1,27 @@
+
+.interface_nav {
+  margin: 25px 0;
+}
+
+.interface_nav label {
+  display: block;
+  text-align: center;
+}
+.styled_buttons {
+  text-shadow: 2px 2px 4px #666666;
+  cursor: pointer;
+  margin: auto;
+  font-size: 32px;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  display: block;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+
+}
+
+.go_back {
+  margin-top: 30px;
+}
