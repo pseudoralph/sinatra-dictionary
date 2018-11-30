@@ -14,5 +14,5 @@ class Word
   def add_definition(definition)
     @definitions.push(definition)
   end
-  
+
 end

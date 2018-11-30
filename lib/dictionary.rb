@@ -1,14 +1,17 @@
-require 'new_word'
+require_relative 'word'
+require 'pry'
 
 class Dictionary
   @@db_dictionary = []
 
-  def initialize(load_defaults=true)
-    if load_defaults
-      # starter dictionary gets loaded here
-      @@db_dictionary.push("word1")
-      @@db_dictionary.push("word2")
-      @@db_dictionary.push("word3")
+  def initialize(standard_dictionary=true)
+    if standard_dictionary
+      defaults = []
+
+      defaults.push(Word.new({word: 'hello', definition: 'a kind greeting'}))
+      defaults.push(Word.new({word: 'goodbye', definition: 'opposite of hello'}))
+
+      @@db_dictionary = defaults
     end
 
   end
@@ -17,4 +20,18 @@ class Dictionary
     @@db_dictionary
   end
 
+  def self.add_new_word(attributes)
+    @@db_dictionary.push(Word.new(attributes))
+  end
+
 end
+
+#
+# val = {word: 'hello', definition: 'a kind greeting'}
+# val2 = {word: 'goodbye', definition: 'opposite of hello'}
+#
+
+# word = Word.new(val)
+# word.add_definition('a recurring character from Arrested Development')
+#
+# expect(word.definitions).to eq(['a kind greeting','a recurring character from Arrested Development'])

@@ -1,7 +1,7 @@
 require "dictionary"
 require 'rspec'
 
-describe ("new_word") do
+describe ("word") do
   it ("retreives all definitions of a word") do
     val = {word: 'hello', definition: 'a kind greeting'}
     word = Word.new(val)
@@ -19,10 +19,10 @@ describe ("dictionary") do
     expect(Dictionary.get_all_words).to eq([])
   end
 
-  it ("create a dictionary with default words") do
-    dict = Dictionary.new()
-
-    expect(Dictionary.get_all_words).to eq(["word1","word2","word3"])
-  end
+  # it ("create a dictionary with default words") do
+  #   dict = Dictionary.new()
+  #
+  #   expect(Dictionary.get_all_words).to eq(["word1","word2","word3"])
+  # end
 
 end

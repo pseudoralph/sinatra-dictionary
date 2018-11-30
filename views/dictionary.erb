@@ -2,7 +2,12 @@
 
   <div class="row">
 
-    <%= @test %>
+    <ul>
+      <% @all_words.each do |word| %>
+      <li> <%= word.word %> </li>
+      <% end %>
+    </ul>
+
 
   </div>
 

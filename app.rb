@@ -1,23 +1,30 @@
 require ("sinatra")
 require ("sinatra/reloader")
 also_reload ("lib/**/*.rb")
-require (./lib/dictionary.rb)
+require ('./lib/dictionary.rb')
+require ('pry')
+
 
 get ("/") do
+  dictionary = Dictionary.new()
   erb :index
 end
 
 get ("/dictionary") do
-  @test = "default view"
+  @all_words = Dictionary.get_all_words
   erb :dictionary
 end
 
 post ("/dictionary") do
-  @test = "view dictionary"
+  @all_words = Dictionary.get_all_words
   erb :dictionary
 end
 
 post ("/dictionary/add_word") do
   @test = "add word"
-  erb :dictionary
+  erb :add_word
+end
+
+post ("/test") do
+binding.pry
 end
