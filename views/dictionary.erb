@@ -1,8 +1,8 @@
-<div class="row">
+<div class="row dictionary_view">
 
   <ul>
     <% @all_words.each do |word| %>
-    <li> <a href="/definition/<%= word.word_id %>"> <%= word.word %> </a></li>
+    <li> <a href="/definition/<%= word.word_id %>"> <%= word.word.capitalize %> </a></li>
     <% end %>
   </ul>
 

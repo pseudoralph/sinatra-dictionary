@@ -25,7 +25,7 @@ class Dictionary
   end
 
   def self.get_word(word_id)
-    
+
     @@db_dictionary.each do |word|
       if word.word_id == word_id
         return word
@@ -34,13 +34,3 @@ class Dictionary
   end
 
 end
-
-#
-# val = {word: 'hello', definition: 'a kind greeting'}
-# val2 = {word: 'goodbye', definition: 'opposite of hello'}
-#
-
-# word = Word.new(val)
-# word.add_definition('a recurring character from Arrested Development')
-#
-# expect(word.definitions).to eq(['a kind greeting','a recurring character from Arrested Development'])
