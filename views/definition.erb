@@ -1,14 +1,22 @@
-<div class="card">
+<div class="card definition">
   <h5 class="card-header"><%= @definition.word.capitalize %></h5>
   <div class="card-body">
-    <label>Definition: </label>
 
-    <% @definition.definitions.each do |definition| %>
-    <div class="form-control">
-      <p class="card-text"><%= definition %></p>
+    <div class="row">
+      <div class="col-md-2">
+        <label>Definition: </label>
+      </div>
+
+      <div class="col-md-10">
+        <ul>
+          <% @definition.definitions.each do |definition| %>
+          <li><%= definition %></li>
+          <% end %>
+        </ul>
+      </div>
+
 
     </div>
-    <% end %>
 
     <div class="go_back">
 
@@ -19,5 +27,5 @@
 </div>
 
 <div class="go_back">
-  <a href="/dictionary" class="float-left">⬅️ return</a>
+  <a href="/dictionary" class="float-left">⬅️ go back</a>
 </div>

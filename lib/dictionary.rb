@@ -20,17 +20,17 @@ class Dictionary
     @@db_dictionary
   end
 
-  def self.add_new_word(attributes)
-    @@db_dictionary.push(Word.new(attributes))
-  end
 
   def self.get_word(word_id)
-
     @@db_dictionary.each do |word|
       if word.word_id == word_id
         return word
       end
     end
+  end
+
+  def self.add_new_word(attributes)
+    @@db_dictionary.push(Word.new(attributes))
   end
 
 end

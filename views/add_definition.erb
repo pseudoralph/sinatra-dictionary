@@ -1,19 +1,18 @@
-<div class="card add_definition">
+<div class="card definition">
   <h5 class="card-header"><%= @definition.word.capitalize %></h5>
   <div class="card-body">
 
     <div class="row">
       <div class="col-md-2">
         <label>Definition: </label>
-
       </div>
 
       <div class="col-md-10">
-        <ol>
+        <ul>
           <% @definition.definitions.each do |definition| %>
           <li><%= definition %></li>
           <% end %>
-        </ol>
+        </ul>
 
         <form action="/definition/<%= @definition.word_id %>/add_definition" method="post">
           <div class="form-group">
@@ -33,5 +32,5 @@
 </div>
 
 <div class="go_back">
-  <a href="/definition/<%= @definition.word_id %>" class="float-left">⬅️ return</a>
+  <a href="/definition/<%= @definition.word_id %>" class="float-left">⬅️ go back</a>
 </div>
