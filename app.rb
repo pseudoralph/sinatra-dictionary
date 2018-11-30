@@ -4,7 +4,6 @@ also_reload ("lib/**/*.rb")
 require ('./lib/dictionary.rb')
 require ('pry')
 
-
 get ("/") do
   dictionary = Dictionary.new()
   erb :index
@@ -28,7 +27,6 @@ end
 post ("/definition/:word_id/add_definition") do
   @definition = Dictionary.get_word(params[:word_id])
   @definition.add_definition(params[:definition])
-  
   erb :definition
 end
 
