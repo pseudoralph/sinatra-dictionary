@@ -1,34 +1,46 @@
 a {
   color: #494545;
 }
-
-i {
-  text-align: center;
+.app {
+  height: 100vh;
+  overflow: hidden;
 }
 
-.low_vis a {
+
+.app_box {
+  /* position: relative; */
+
+  /* margin: auto; */
+  /* width: 90vw; */
+  /* bottom: 40px; */
+  height: 80%;
+  margin-bottom: 20px; 
+}
+
+.options {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: block;
+  width: 100%;
+  z-index: 100;
+}
+
+.options a {
 color: #8e8e8e;
 border-bottom: 2px dotted #ddd;
 }
 
-.low_vis a:hover {
-color: #8e8e8e;
-border-bottom: none;
+.options a:hover {
+  color: #8e8e8e;
+  border-bottom: none;
 }
 
-.app_box {
-  height: 80vh;
-}
-
-.interface_nav {
+.button_nav {
   margin: 25px 0;
 }
 
-.interface_nav p {
-  text-align: center;
-}
-
-.styled_buttons {
+.button_nav button {
   text-shadow: 2px 2px 4px #666666;
   cursor: pointer;
   margin: auto;
@@ -40,6 +52,14 @@ border-bottom: none;
   height: 72px;
   width: 72px;
   border-radius: 50%;
+}
+
+.button_nav p {
+  text-align: center;
+}
+
+.button_nav i {
+  text-align: center;
 }
 
 .dictionary_view {

@@ -1,8 +1,11 @@
-<div class="row interface_nav">
+<div class="app">
+
+
+<div class="row button_nav">
   <div class="col mx-auto">
 
     <form action="/dictionary" method="get" target="view_frame">
-      <button type="submit" id="view" class="styled_buttons" >
+      <button type="submit">
         <i class="fas fa-glasses"></i>
       </button>
       <p>View all words</p>
@@ -13,7 +16,7 @@
   <div class="col mx-auto">
 
     <form action="/dictionary/add_word" method="get" target="view_frame">
-      <button type="submit" class="styled_buttons" id="add"><i class="fas fa-plus"></i></button>
+      <button type="submit"><i class="fas fa-plus"></i></button>
       <p>Add new word</p>
 
     </form>
@@ -22,9 +25,11 @@
 </div>
 
 <div class="container-fluid app_box">
-  <iframe src="/dictionary" width="100%" height="100%" name="view_frame" frameborder="0"></iframe>
+  <iframe src="/dictionary" height="100%" width="100%" name="view_frame" frameborder="1"></iframe>
 </div>
-<div class="">
-  <small class="low_vis"><a href="/console" target="view_frame">options</a></small>
 
+<div class="options">
+  <small><a href="/console" target="view_frame">options</a></small>
+
+</div>
 </div>
