@@ -2,6 +2,10 @@ a {
   color: #494545;
 }
 
+i {
+  text-align: center;
+}
+
 .low_vis a {
 color: #8e8e8e;
 border-bottom: 2px dotted #ddd;
