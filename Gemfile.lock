@@ -84,4 +84,8 @@ DEPENDENCIES
   sinatra-contrib
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.17.1
+=======
+   1.16.6
+>>>>>>> 946c408e7165b351259f14eeba194c4063ccb159

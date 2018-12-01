@@ -4,7 +4,7 @@ class Word
   attr_reader :word, :word_id, :definitions
 
   def initialize(attributes)
-    @word_id = SecureRandom.alphanumeric(6)
+    @word_id = SecureRandom.hex(6)
     @word = attributes[:word]
     @definitions = []
   end
