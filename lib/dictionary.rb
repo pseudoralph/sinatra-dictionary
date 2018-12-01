@@ -6,12 +6,13 @@ class Dictionary
 
   def initialize(standard_dictionary=true)
     if standard_dictionary
-      defaults = []
+      default = []
 
-      defaults.push(Word.new({word: 'Hello', definition: 'A kind greeting'}))
-      defaults.push(Word.new({word: 'Goodbye', definition: 'The opposite of hello— typically said when a person leaves'}))
+      DefaultDict::HARDWORDS.each do |key|
+        default.push(Word.new({word: key[:word]}))
 
-      @@db_dictionary = defaults
+      end
+      @@db_dictionary = default
     end
 
   end

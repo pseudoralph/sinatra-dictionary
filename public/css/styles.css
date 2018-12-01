@@ -21,13 +21,14 @@ a {
   margin: auto;
   font-size: 32px;
   background-color: #28a745;
-  border-color: #28a745;
+  /* border-color: #28a745; */
   color: white;
   display: block;
   height: 72px;
   width: 72px;
-  border-radius: 50%;
+  border-radius: 15px;
 }
+
 
 .dictionary_view {
   height: 100%;

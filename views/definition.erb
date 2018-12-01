@@ -3,12 +3,14 @@
   <div class="card-body">
 
     <div class="row">
+
       <div class="col-md-2">
         <% def_label= (@definition.definitions.length > 1) ? "Definitions" : "Definition" %>
         <label><%= def_label %>: </label>
       </div>
 
       <div class="col-md-10">
+        <%= @definition.definitions.length %>
         <ul>
           <% @definition.definitions.each do |definition| %>
           <li><%= definition %></li>

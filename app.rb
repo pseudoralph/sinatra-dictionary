@@ -4,6 +4,11 @@ also_reload ("lib/**/*.rb")
 require_relative ('lib/dictionary.rb')
 
 get ("/") do
+  dictionary = Dictionary.new(false)
+  erb :index
+end
+
+get ("/load") do
   dictionary = Dictionary.new()
   erb :index
 end
