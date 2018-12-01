@@ -1,35 +1,31 @@
 <div class="app">
+  <div class="row app_nav">
+    <div class="col mx-auto">
 
+      <form action="/dictionary" method="get" target="app_view">
+        <button type="submit">
+          <i class="fas fa-glasses"></i>
+        </button>
+        <p>View all words</p>
+      </form>
 
-<div class="row button_nav">
-  <div class="col mx-auto">
+    </div>
 
-    <form action="/dictionary" method="get" target="view_frame">
-      <button type="submit">
-        <i class="fas fa-glasses"></i>
-      </button>
-      <p>View all words</p>
-    </form>
+    <div class="col mx-auto">
+
+      <form action="/dictionary/add_word" method="get" target="app_view">
+        <button type="submit"><i class="fas fa-plus"></i></button>
+        <p>Add new word</p>
+      </form>
+    </div>
 
   </div>
 
-  <div class="col mx-auto">
-
-    <form action="/dictionary/add_word" method="get" target="view_frame">
-      <button type="submit"><i class="fas fa-plus"></i></button>
-      <p>Add new word</p>
-
-    </form>
+  <div class="container-fluid app_view">
+    <iframe src="/dictionary" height="100%" width="100%" name="app_view" frameborder="0"></iframe>
   </div>
 
-</div>
-
-<div class="container-fluid app_box">
-  <iframe src="/dictionary" height="100%" width="100%" name="view_frame" frameborder="1"></iframe>
-</div>
-
-<div class="options">
-  <small><a href="/console" target="view_frame">options</a></small>
-
-</div>
+  <div class="app_options">
+    <small><a href="/console" target="app_view">options</a></small>
+  </div>
 </div>

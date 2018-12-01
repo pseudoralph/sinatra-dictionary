@@ -1,48 +1,17 @@
 a {
   color: #494545;
 }
+
 .app {
   height: 100vh;
   overflow: hidden;
 }
 
-
-.app_box {
-  /* position: relative; */
-
-  /* margin: auto; */
-  /* width: 90vw; */
-  /* bottom: 40px; */
-  height: 80%;
-  margin-bottom: 20px;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll; 
-}
-
-.options {
-  position: fixed;
-  bottom: 0;
-  background-color: white;
-  display: block;
-  width: 100%;
-  z-index: 100;
-}
-
-.options a {
-color: #8e8e8e;
-border-bottom: 2px dotted #ddd;
-}
-
-.options a:hover {
-  color: #8e8e8e;
-  border-bottom: none;
-}
-
-.button_nav {
+.app_nav {
   margin: 25px 0;
 }
 
-.button_nav button {
+.app_nav button {
   text-shadow: 2px 2px 4px #666666;
   cursor: pointer;
   margin: auto;
@@ -56,12 +25,38 @@ border-bottom: 2px dotted #ddd;
   border-radius: 50%;
 }
 
-.button_nav p {
+.app_nav p {
   text-align: center;
 }
 
-.button_nav i {
+.app_nav i {
   text-align: center;
+}
+
+.app_view {
+  height: 80%;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+}
+
+.app_options {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: block;
+  width: 100%;
+  z-index: 100;
+}
+
+.app_options a {
+  color: #8e8e8e;
+  border-bottom: 2px dotted #ddd;
+}
+
+.app_options a:hover {
+  color: #8e8e8e;
+  border-bottom: none;
 }
 
 .dictionary_view {
