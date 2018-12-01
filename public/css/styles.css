@@ -2,6 +2,16 @@ a {
   color: #494545;
 }
 
+.low_vis a {
+color: #8e8e8e;
+border-bottom: 2px dotted #ddd;
+}
+
+.low_vis a:hover {
+color: #8e8e8e;
+border-bottom: none;
+}
+
 .app_box {
   height: 80vh;
 }
@@ -21,14 +31,13 @@ a {
   margin: auto;
   font-size: 32px;
   background-color: #28a745;
-  /* border-color: #28a745; */
+  border-color: #28a745;
   color: white;
   display: block;
   height: 72px;
   width: 72px;
-  border-radius: 15px;
+  border-radius: 50%;
 }
-
 
 .dictionary_view {
   height: 100%;

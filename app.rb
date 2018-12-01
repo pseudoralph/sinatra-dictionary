@@ -2,15 +2,28 @@ require ("sinatra")
 require ("sinatra/reloader")
 also_reload ("lib/**/*.rb")
 require_relative ('lib/dictionary.rb')
+require 'pry'
 
 get ("/") do
-  dictionary = Dictionary.new(false)
+  dictionary = Dictionary.new()
   erb :index
 end
 
-get ("/load") do
-  dictionary = Dictionary.new()
-  erb :index
+get ("/console") do
+  erb :console
+end
+
+get ("/console/:flag") do
+  # binding.pry
+  if params[:flag] == "reset"
+    Dictionary.reset
+  elsif params[:flag] == "hard"
+    Dictionary.load_hard
+  elsif params[:flag] == "hard_db"
+    Dictionary.load_hard(true)
+  end
+
+  redirect ("/dictionary")
 end
 
 get ("/dictionary") do

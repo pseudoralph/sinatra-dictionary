@@ -4,15 +4,25 @@ require_relative 'default_dict'
 class Dictionary
   @@db_dictionary = []
 
-  def initialize(standard_dictionary=true)
-    if standard_dictionary
-      default = []
+  def self.reset
+    @@db_dictionary = []
+  end
 
-      DefaultDict::HARDWORDS.each do |key|
-        default.push(Word.new({word: key[:word]}))
+  def self.load_hard(db=false)
+    default = []
+    DefaultDict::HARDWORDS.each do |key|
+      default.push(Word.new({word: key[:word]}))
+    end
+    @@db_dictionary = default
 
+    if db
+      @@db_dictionary.each do |word|
+        DefaultDict::HARDWORDS.each do |key|
+          if key[:word] == word.word
+            word.add_definition(key[:definition])
+          end
+        end
       end
-      @@db_dictionary = default
     end
 
   end

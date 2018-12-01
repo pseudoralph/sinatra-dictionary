@@ -4,13 +4,14 @@
 
     <div class="row">
 
+      <% button_text = @definition.definitions.length > 0 ? "add another definition" : "add a definition"%>
       <div class="col-md-2">
-        <% def_label= (@definition.definitions.length > 1) ? "Definitions" : "Definition" %>
-        <label><%= def_label %>: </label>
+
+        <% def_label= @definition.definitions.length > 1 ? "Definitions: " : (@definition.definitions.length == 0 ? "" : "Definition: ") %>
+        <label><%= def_label %></label>
       </div>
 
       <div class="col-md-10">
-        <%= @definition.definitions.length %>
         <ul>
           <% @definition.definitions.each do |definition| %>
           <li><%= definition %></li>
@@ -21,7 +22,8 @@
     </div>
 
     <div class="go_back">
-      <a href="/definition/<%= @definition.word_id %>/add_definition" class="float-left">➕ add another definition</a>
+      <% button_text = @definition.definitions.length > 0 ? "add another definition" : "add a definition"%>
+      <a href="/definition/<%= @definition.word_id %>/add_definition" class="float-left">➕ <%= button_text %></a>
     </div>
   </div>
 </div>
