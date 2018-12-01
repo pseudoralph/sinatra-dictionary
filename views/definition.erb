@@ -4,11 +4,16 @@
 
     <div class="row">
 
-      <% button_text = @definition.definitions.length > 0 ? "add another definition" : "add a definition"%>
+      <% if @definition.definitions.length > 0
+        button_text = "add another definition"
+        else
+        button_text = "add a definition"
+      end %>
+
       <div class="col-md-2">
 
-        <% def_label= @definition.definitions.length > 1 ? "Definitions: " : (@definition.definitions.length == 0 ? "" : "Definition: ") %>
-        <label><%= def_label %></label>
+        <% plural_defs_label= @definition.definitions.length > 1 ? "Definitions: " : (@definition.definitions.length == 0 ? "" : "Definition: ") %>
+        <label><%= plural_defs_label %></label>
       </div>
 
       <div class="col-md-10">
@@ -22,7 +27,6 @@
     </div>
 
     <div class="go_back">
-      <% button_text = @definition.definitions.length > 0 ? "add another definition" : "add a definition"%>
       <a href="/definition/<%= @definition.word_id %>/add_definition" class="float-left">➕ <%= button_text %></a>
     </div>
   </div>

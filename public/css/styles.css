@@ -24,8 +24,7 @@ border-bottom: none;
   margin: 25px 0;
 }
 
-.interface_nav label {
-  display: block;
+.interface_nav p {
   text-align: center;
 }
 

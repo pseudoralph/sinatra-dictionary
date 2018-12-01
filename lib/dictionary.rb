@@ -8,23 +8,16 @@ class Dictionary
     @@db_dictionary = []
   end
 
-  def self.load_hard(db=false)
-    default = []
+  def self.load(with_defs=false)
+    db = []
     DefaultDict::HARDWORDS.each do |key|
-      default.push(Word.new({word: key[:word]}))
-    end
-    @@db_dictionary = default
-
-    if db
-      @@db_dictionary.each do |word|
-        DefaultDict::HARDWORDS.each do |key|
-          if key[:word] == word.word
-            word.add_definition(key[:definition])
-          end
-        end
+      word = Word.new({word: key[:word]})
+      if with_defs
+        word.add_definition(key[:definition])
       end
+      db.push(word)
     end
-
+    @@db_dictionary = db
   end
 
   def self.get_all_words

@@ -14,13 +14,12 @@ get ("/console") do
 end
 
 get ("/console/:flag") do
-  # binding.pry
   if params[:flag] == "reset"
     Dictionary.reset
-  elsif params[:flag] == "hard"
-    Dictionary.load_hard
-  elsif params[:flag] == "hard_db"
-    Dictionary.load_hard(true)
+  elsif params[:flag] == "load_empty"
+    Dictionary.load
+  elsif params[:flag] == "load_with_defs"
+    Dictionary.load(true)
   end
 
   redirect ("/dictionary")
