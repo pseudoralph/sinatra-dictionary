@@ -30,7 +30,7 @@ Ruby, Sinatra
 
 - [ ] Project includes thorough and passing integration specs.
 
-- [ ] Application is deployed to Heroku (Include the link in your README).
+- [x] Application is deployed to Heroku (Include the link in your README).
 
 - [x] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology.
 
