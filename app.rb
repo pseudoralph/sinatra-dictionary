@@ -2,7 +2,6 @@ require ("sinatra")
 require ("sinatra/reloader")
 also_reload ("lib/**/*.rb")
 require ('./lib/dictionary.rb')
-require ('pry')
 
 get ("/") do
   dictionary = Dictionary.new()
@@ -10,7 +9,7 @@ get ("/") do
 end
 
 get ("/dictionary") do
-  @all_words = (Dictionary.get_all_words)
+  @all_words = Dictionary.get_all_words
   erb :dictionary
 end
 
@@ -25,8 +24,8 @@ get ("/definition/:word_id/add_definition") do
 end
 
 post ("/definition/:word_id/add_definition") do
+  Dictionary.append_definition(params[:word_id],params[:definition])
   @definition = Dictionary.get_word(params[:word_id])
-  @definition.add_definition(params[:definition])
   erb :definition
 end
 

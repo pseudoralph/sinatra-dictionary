@@ -1,4 +1,4 @@
-require "dictionary"
+require 'dictionary'
 require 'rspec'
 
 describe ("word") do
@@ -23,6 +23,23 @@ describe ("dictionary") do
   it ("create new empty dictionary") do
     dict = Dictionary.new(false)
     expect(Dictionary.get_all_words).to eq([])
+  end
+
+  it ("returns all words from dictionary") do
+
+
+  end
+
+  it ("returns a specific word from the dictionary") do
+
+  end
+
+  it ("appends an additional definition to a word in the dictionary") do
+
+  end
+
+  it ("creates a new word object and adds it to the dictionary") do
+
   end
 
   # it ("create new dictionary with pre-loaded words and definitions") do

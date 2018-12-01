@@ -1,5 +1,5 @@
 require_relative 'word'
-require 'pry'
+require_relative 'default_dict'
 
 class Dictionary
   @@db_dictionary = []
@@ -8,8 +8,8 @@ class Dictionary
     if standard_dictionary
       defaults = []
 
-      defaults.push(Word.new({word: 'hello', definition: 'a kind greeting'}))
-      defaults.push(Word.new({word: 'goodbye', definition: 'opposite of hello'}))
+      defaults.push(Word.new({word: 'Hello', definition: 'A kind greeting'}))
+      defaults.push(Word.new({word: 'Goodbye', definition: 'The opposite of hello— typically said when a person leaves'}))
 
       @@db_dictionary = defaults
     end
@@ -19,7 +19,6 @@ class Dictionary
   def self.get_all_words
     @@db_dictionary
   end
-
 
   def self.get_word(word_id)
     @@db_dictionary.each do |word|
@@ -31,6 +30,14 @@ class Dictionary
 
   def self.add_new_word(attributes)
     @@db_dictionary.push(Word.new(attributes))
+  end
+
+  def self.append_definition(word_id,definition)
+    @@db_dictionary.each do |word|
+      if word.word_id == word_id
+        word.add_definition(definition)
+      end
+    end
   end
 
 end
