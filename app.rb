@@ -1,7 +1,7 @@
 require ("sinatra")
 require ("sinatra/reloader")
 also_reload ("lib/**/*.rb")
-require ('./lib/dictionary.rb')
+require_relative ('lib/dictionary.rb')
 
 get ("/") do
   dictionary = Dictionary.new()
