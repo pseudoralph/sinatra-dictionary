@@ -1,21 +1,21 @@
-# Sinatra Dictionary
+# Word Definer
 
-#### A dictionary with the ability to add words
+#### A word defining app to aide children in the learning of new words
 
 #### Ralph Perdomo. November 30, 2018
 
 ## Description
-A dictionary webapp written in Ruby using the Sinatra framework that allows the site's visitor to read definitions and add words with as many definitions as they wish.
+Add new, unknown, and challenging words to a list. Once you learn that words meaning, add its definition. A child-focused webapp written in Ruby using the Sinatra framework.
 
 ## Setup/Installation Requirements
 
-* clone this repository using `git clone https://github.com/pseudoralph/sinatra-dictionary`
+* clone this repository using `git clone https://github.com/pseudoralph/word-definer`
 * navigate to the downloaded repo
 * run the ruby gem `bundle` to install necessary gems
   * NOTE: install `bundle` using `gem install bundle` if not installed
 * type `rspec` to see test's results
 
-This app can also be accessed by visiting: [http://dictionary.prdmo.com/](http://dictionary.prdmo.com/)
+This app can also be accessed by visiting: [http://definer.prdmo.com/](http://definer.prdmo.com/)
 
 ## Technologies Used
 
