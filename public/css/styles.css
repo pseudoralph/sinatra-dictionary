@@ -8,7 +8,7 @@ a {
 }
 
 .app_nav {
-  margin-top: 15px;
+  margin: 15px 0 0;
   width: 100%;
 }
 
@@ -24,6 +24,7 @@ a {
   height: 72px;
   width: 72px;
   border-radius: 50%;
+  content: none;
 }
 
 .app_nav p {
@@ -34,13 +35,13 @@ a {
   text-align: center;
 }
 
+
 .app_view {
   position: relative;
   height: calc(100% - 150px);
+  padding: 10px 0;
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
-  padding: 10px 0;
-
 }
 
 .app_view iframe {
@@ -105,4 +106,24 @@ a {
 
 .go_back {
   margin-top: 30px;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */
+
+  .app_view {
+    /* position: relative; */
+    height: calc(100% - 230px);
+    /* padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll; */
+  }
+
+  #add {
+    margin-left: -11px;
+  }
+
+  #glasses {
+    margin-left: -15px;
+  }
 }

@@ -4,7 +4,7 @@
 
       <form action="/dictionary" method="get" target="app_view">
         <button type="submit" name="view">
-          <i class="fas fa-glasses"></i>
+          <i class="fas fa-glasses" id="glasses"></i>
         </button>
         <p>View all words</p>
       </form>
@@ -14,7 +14,9 @@
     <div class="col mx-auto">
 
       <form action="/dictionary/add_word" method="get" target="app_view">
-        <button type="submit" value="add_word"><i class="fas fa-plus"></i></button>
+        <button type="submit" value="add_word">
+          <i class="fas fa-plus" id="add"></i>
+        </button>
         <p>Add new word</p>
       </form>
     </div>
