@@ -1,6 +1,10 @@
 <div class="row dictionary_view">
 
   <ul>
+    <% if @all_words.length == 0 %>
+    <li style="text-align: center; font-style: italic; color: #474747;"><small>dictionary empty</small></li>
+
+    <% end %>
     <% @all_words.each do |word| %>
     <li> <a href="/definition/<%= word.word_id %>"> <%= word.word.capitalize %> </a></li>
     <% end %>

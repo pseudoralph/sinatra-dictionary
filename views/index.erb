@@ -3,7 +3,7 @@
     <div class="col mx-auto">
 
       <form action="/dictionary" method="get" target="app_view">
-        <button type="submit">
+        <button type="submit" name="view">
           <i class="fas fa-glasses"></i>
         </button>
         <p>View all words</p>
@@ -14,7 +14,7 @@
     <div class="col mx-auto">
 
       <form action="/dictionary/add_word" method="get" target="app_view">
-        <button type="submit"><i class="fas fa-plus"></i></button>
+        <button type="submit" value="add_word"><i class="fas fa-plus"></i></button>
         <p>Add new word</p>
       </form>
     </div>
@@ -22,7 +22,7 @@
   </div>
 
   <div class="container-fluid app_view">
-    <iframe src="/dictionary" height="100%" width="100%" name="app_view" frameborder="0"></iframe>
+    <iframe src="/dictionary" name="app_view" id="app_view" frameborder="0"></iframe>
   </div>
 
   <div class="app_options">

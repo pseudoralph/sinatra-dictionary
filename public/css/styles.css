@@ -8,7 +8,8 @@ a {
 }
 
 .app_nav {
-  margin: 25px 0;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .app_nav button {
@@ -34,19 +35,29 @@ a {
 }
 
 .app_view {
-  height: 80%;
-  margin-bottom: 20px;
+  position: relative;
+  height: calc(100% - 150px);
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
+  padding: 10px 0;
+
+}
+
+.app_view iframe {
+  height: 100%;
+  width: 100%;
+  margin-bottom: -10px;
 }
 
 .app_options {
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: #fff;
   display: block;
   width: 100%;
   z-index: 100;
+  line-height: 30px;
+
 }
 
 .app_options a {
@@ -60,7 +71,6 @@ a {
 }
 
 .dictionary_view {
-  height: 100%;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
@@ -71,6 +81,7 @@ a {
   list-style: none;
   width: 100%;
   padding: 0;
+  margin-bottom: 0 !important;
 }
 
 .dictionary_view li {
@@ -90,7 +101,6 @@ a {
 .definition li {
   padding: 0 0 10px 5px;
   line-height: 22px;
-
 }
 
 .go_back {
