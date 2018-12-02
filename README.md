@@ -28,7 +28,7 @@ Ruby, Sinatra
 
 - [x] Sinatra routes process GET and POST requests/responses.
 
-- [ ] Project includes thorough and passing integration specs.
+- [x] Project includes thorough and passing integration specs.
 
 - [x] Application is deployed to Heroku (Include the link in your README).
 

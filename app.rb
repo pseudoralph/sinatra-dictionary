@@ -27,28 +27,24 @@ end
 
 get ("/dictionary") do
   dictionary = Dictionary.new()
-
   @all_words = dictionary.get_all_words
   erb :dictionary
 end
 
 get ("/definition/:word_id") do
   dictionary = Dictionary.new()
-
   @definition = dictionary.get_word(params[:word_id])
   erb :definition
 end
 
 get ("/definition/:word_id/add_definition") do
   dictionary = Dictionary.new()
-
   @definition = dictionary.get_word(params[:word_id])
   erb :add_definition
 end
 
 post ("/definition/:word_id/add_definition") do
   dictionary = Dictionary.new()
-
   dictionary.append_definition(params[:word_id],params[:definition])
   @definition = dictionary.get_word(params[:word_id])
   erb :definition
@@ -60,7 +56,6 @@ end
 
 post ("/dictionary/add_word") do
   dictionary = Dictionary.new()
-
   dictionary.add_new_word({word: params[:word], definition: params[:definition]})
   redirect ("/dictionary")
 end

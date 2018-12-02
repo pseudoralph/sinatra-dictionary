@@ -2,7 +2,7 @@
 
   <ul>
     <% if @all_words.length == 0 %>
-    <li style="text-align: center; font-style: italic; color: #474747;"><small>dictionary empty</small></li>
+    <li class="empty"><small>dictionary empty</small></li>
 
     <% end %>
     <% @all_words.each do |word| %>
