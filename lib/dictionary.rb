@@ -20,11 +20,11 @@ class Dictionary
     @@db_dictionary = db
   end
 
-  def self.get_all_words
+  def get_all_words
     @@db_dictionary
   end
 
-  def self.get_word(word_id)
+  def get_word(word_id)
     @@db_dictionary.each do |word|
       if word.word_id == word_id
         return word
@@ -32,11 +32,11 @@ class Dictionary
     end
   end
 
-  def self.add_new_word(attributes)
+  def add_new_word(attributes)
     @@db_dictionary.push(Word.new(attributes))
   end
 
-  def self.append_definition(word_id,definition)
+  def append_definition(word_id,definition)
     @@db_dictionary.each do |word|
       if word.word_id == word_id
         word.add_definition(definition)

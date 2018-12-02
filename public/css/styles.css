@@ -78,7 +78,7 @@ a {
   line-height: 42px;
 }
 
-.dictionary_view li:nth-child(even) {
+.dictionary_view li:nth-child(odd) {
   background: #f2f2f2;
 }
 
