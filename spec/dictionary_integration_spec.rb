@@ -19,7 +19,7 @@ describe 'Word definer', {:type => :feature} do
     expect(page).to have_content("Albumen")
   end
 
-  it 'adds definition to Albumen (sample dictionary)' do
+  it 'adds a definition to Albumen (sample dictionary)' do
     visit '/'
     click_link 'options'
     click_link 'reset and prepopulate'
